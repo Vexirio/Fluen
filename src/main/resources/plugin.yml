@@ -1,0 +1,9 @@
+name: Fluen
+version: '0.01'
+main: xyz.vexirio.fluen.Fluen
+api-version: '1.21'
+prefix: Stannum
+load: STARTUP
+authors: [ vexirio ]
+description: essentials
+website: https://modrinth.com/user/vexirio_was_taken
