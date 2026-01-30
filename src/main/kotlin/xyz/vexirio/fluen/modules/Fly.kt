@@ -34,22 +34,15 @@ class Fly(private val plugin: JavaPlugin) : CommandExecutor {
             return true
         }
 
-        // Инвертируем возможность полета
         val flight = !player.allowFlight
         player.allowFlight = flight
 
-        // Управление списком и состоянием полета
         if (flight) {
             flyPlayers.add(player.uniqueId)
+            sender.sendMessage(color(plugin.config.getString("fly-enabled")?.replace("%player%", player.name)))
         } else {
             flyPlayers.remove(player.uniqueId)
             player.isFlying = false
-        }
-
-        // Сообщения из конфига
-        if (flight) {
-            sender.sendMessage(color(plugin.config.getString("fly-enabled")?.replace("%player%", player.name)))
-        } else {
             sender.sendMessage(color(plugin.config.getString("fly-disabled")?.replace("%player%", player.name)))
         }
 
