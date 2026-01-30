@@ -1,9 +1,15 @@
 name: Fluen
 version: '0.01'
-main: xyz.vexirio.fluen.Fluen
+main: xyz.vexirio.fluen.FluenMain
 api-version: '1.21'
 prefix: Stannum
 load: STARTUP
 authors: [ vexirio ]
 description: essentials
 website: https://modrinth.com/user/vexirio_was_taken
+
+commands:
+  fly:
+  feed:
+  godmode:
+

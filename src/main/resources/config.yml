@@ -1,3 +1,9 @@
-#Supports hex and color codes! For example: #ffffff, &f
+# supports hex and color codes! For example: #ffffff, &f
 
-no-permission: "No permission"
+no-permission: "no permission"
+player-not-found: "player not found"
+fly-enabled: "&ffly enabled for &b%player%" # placeholder: %player%
+fly-disabled: "&ffly disabled for &b%player%" # placeholder: %player%
+godmode-enabled: "&fgodmode enabled for &b%player%" # placeholder: %player%
+godmode-disabled: "&fgodmode disabled for &b%player%" # placeholder: %player%
+was-fed: "&b%player% &fwas fed" # placeholder: %player%

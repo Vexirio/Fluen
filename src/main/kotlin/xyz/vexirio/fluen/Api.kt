@@ -1,14 +1,10 @@
 /*
 How to use :3
+
+import xyz.vexirio.fluen.Api
+
 color:
 sender.sendMessage(Api.color(plugin.config.getString("no-permission")))
-
-permission:
-import org.bukkit.command.Command
-import org.bukkit.command.CommandExecutor
-import org.bukkit.command.CommandSender
-
-if (!Api.permission("fluen.admin", sender, this)) return true
  */
 
 
@@ -16,8 +12,6 @@ if (!Api.permission("fluen.admin", sender, this)) return true
 package xyz.vexirio.fluen
 
 import net.md_5.bungee.api.ChatColor
-import org.bukkit.command.CommandSender
-import org.bukkit.plugin.java.JavaPlugin
 import java.util.regex.Matcher
 import java.util.regex.Pattern
 
@@ -43,18 +37,5 @@ object Api {
         matcher.appendTail(buffer)
 
         return buffer.toString()
-    }
-
-    fun permission(
-        permission: String, // PluginName.Permission
-        sender: CommandSender,
-        plugin: JavaPlugin
-    ): Boolean {
-        if (!sender.hasPermission(permission)) {
-            sender.sendMessage(plugin.config.getString("no-permission"))
-            return false
-        } else {
-            return true
-        }
     }
 }
